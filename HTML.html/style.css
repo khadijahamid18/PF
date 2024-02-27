@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+    --orange: #FF9814;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--orange);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 0 7%;
+    padding-top: 12rem;
+}
+
+.btn {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    background: var(--orange);
+    color: #fff;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0.1rem .3rem rgba(0, 0, 0, .3);
+    width: 100%;
+}
+
+header .heading {
+    font-size: 3rem;
+    color: #666;
+    padding: 1rem;
+    text-align: center;
+}
+
+header #menu {
+    font-size: 3rem;
+    color: #666;
+    cursor: pointer;
+    margin: 1rem;
+    display: none;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background: var(--orange);
+    padding: 1rem;
+}
+
+header .navbar ul li {
+    margin: 0 1.5rem;
+}
+
+header .navbar ul li a {
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .navbar ul li a:hover {
+    color: #444;
+}
+
+.service {
+    min-height: 100vh;
+    background: #eee;
+}
+
+.service .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.service .box-container .box {
+    background: #fff;
+    margin: 2rem;
+    padding: 1rem;
+    width: 30rem;
+    text-align: center;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, .3);
+}
+
+.service .box-container .box i {
+    font-size: 4rem;
+    padding: 1rem;
+    color: var(--orange);
+}
+
+.service .box-container .box h3 {
+    font-size: 4rem;
+    color: #444;
+}
+
+.service .box-container .box p {
+    font-size: 1.3rem;
+    color: #666;
+    padding: 1rem;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: url(../images/home-bag.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    flex-wrap: wrap;
+}
+
+.home .image {
+    flex: 1 1 40rem;
+}
+
+.home .image img {
+    width: 100;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+}
+
+.home .content h1 {
+    font-size: 4rem;
+    color: #444;
+}
+
+.home .content p {
+    font-size: 1.8rem;
+    color: #666;
+    padding: 1rem;
+}
+
+.contact {
+    min-height: calc(100vh - 20rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+    margin-top: 13rem;
+    flex-wrap: nowrap;
+    padding:  10%;
+}
+
+.contact .form {
+    padding: 2rem;
+    min-width: 30%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, .3);
+}
+
+.contact .content {
+    display: flex;
+    padding: 2rem;
+    flex-shrink: 1;
+    font-size: 16px;
+    min-width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+      flex-direction: column;
+}
+
+.content div, .content p {
+    margin: 10px 0;
+}
+
+.form input, .form textarea{
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    margin: 0.5rem;
+    resize: none;
+    padding: 8px 12px;
+}
+
+
+/* media queries */
+@media (max-width:768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .nav-toggle{
+        display: none
+    }
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content h1 {
+        font-size: 4rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header #menu {
+        display: block;
+    }
+
+    header .navbar {
+        position: fixed;
+        top: 6.2rem;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        border-top: .2rem solid rgba(0, 0, 0, .3);
+    }
+
+    header .navbar ul {
+        height: 100%;
+        width: 100%;
+        flex-flow: column;
+        background: #fff;
+        padding-bottom: 15rem;
+    }
+
+    header .navbar ul li {
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    header .navbar ul li a {
+        font-size: 4rem;
+        color: #333;
+        display: block;
+    }
+
+    header .navbar ul li a:hovet {
+        color: var(--orange);
+    }
+
+    .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .contact{
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width:500px) {
+    html {
+        font-size: 50%;
+    }
+
+}
